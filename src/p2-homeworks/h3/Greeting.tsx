@@ -1,5 +1,7 @@
 import React, {ChangeEvent} from 'react'
 import s from './Greeting.module.css'
+import {Button, Grid, Input, TextField} from "@material-ui/core";
+import SaveIcon from '@material-ui/icons/Save';
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -16,12 +18,48 @@ const Greeting: React.FC<GreetingPropsType> = (
     const inputClass = error ? s.error : ''// need to fix with (?:)
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
-        </div>
+        <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+        >
+            <Grid
+                container
+                justify="center"
+                style={{margin: "10px"}}
+            >
+                <TextField
+                    variant="outlined"
+                    value={name}
+                    onChange={setNameCallback}
+                    label="Enter your name"
+                    error={!!error}
+                    helperText={error}
+                />
+            </Grid>
+            <Grid
+                container
+                justify="center"
+                style={{margin: "10px"}}
+            >
+                <Button
+                    variant="contained"
+                    onClick={addUser}
+                    startIcon={<SaveIcon/>}
+                    className={s.padding}
+                >
+                    Save name
+                </Button>
+            </Grid>
+            <Grid
+                container
+                justify="center"
+                style={{margin: "10px"}}
+            >
+                <span className={s.someClass}>{totalUsers}</span>
+            </Grid>
+        </Grid>
     )
 }
 

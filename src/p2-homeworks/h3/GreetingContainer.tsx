@@ -29,7 +29,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUserCallback(name)
             setName('')
         } else {
-            setError('error')
+            setError('You have not entered a name!')
         }
 
     }

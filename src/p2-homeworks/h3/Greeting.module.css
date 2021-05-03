@@ -1,7 +1,5 @@
 .someClass {
-
-}
-
-.error {
-    border: 1px solid red;
+    font-size: 60px;
+    color: blue;
+    font-weight: bold;
 }
