@@ -1,0 +1,30 @@
+.affairName {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.affairPriority {
+    font-weight: bold;
+    font-style:italic;
+    margin: 5px;
+}
+
+.affairBlock {
+    width: 40%;
+}
+
+.affair {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.hw2 {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonActive {
+
+}

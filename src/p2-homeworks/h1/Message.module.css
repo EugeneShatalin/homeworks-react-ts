@@ -1,0 +1,74 @@
+.message {
+
+}
+
+.cloud {
+    border-radius: 10px;
+    height: auto;
+    max-width: 400px;
+    padding: 20px;
+    position: relative;
+    background-color: #1aff20;
+    color: black;
+    word-wrap: break-word;
+}
+
+.before {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #60fff3;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    left: -140px;
+    content: '';
+}
+
+.after {
+    border: 15px solid transparent;
+    border-bottom-color: #1aff20;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    content: '';
+}
+.wrapper {
+    padding-left: 150px;
+    margin: 100px auto;
+    max-width: 500px;
+}
+
+.name {
+    color: black;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+.message {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+.time {
+    color: black;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+
+@media all and (max-width: 500px) {
+    .wrapper {
+        padding-left: 75px;
+    }
+
+    .before {
+        width: 50px;
+        height: 50px;
+        left: -70px;
+    }
+
+    .after {
+        border-width: 10px;
+        left: -10px;
+    }
+}
